@@ -1,9 +1,11 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {Link, useHistory, useLocation} from 'react-router-dom';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../Controllers/firebase.config';
 import {UserContext} from '../../../App';
+import Header from '../Header/Header';
+import './Login.css'
 
 const Login = () => {
 
@@ -13,11 +15,17 @@ const Login = () => {
     const history = useHistory();
     const location = useLocation();
 
-    const { from } = location.state || { from: { pathname: "/" } };
+    const {from} = location.state || {
+        from: {
+            pathname: "/"
+        }
+    };
 
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
     }
+
+    const [user, setUser]= useState({});
 
     const handleGoogleSignIn = () => {
 
@@ -51,16 +59,10 @@ const Login = () => {
             });
     }
 
-    const handlePasswordSignIn =()=>{
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ...
-          });
-    }
+
     return (
-        <div className="container">
+        <div className="container login-page">
+            <Header/>
             <div className="row">
                 <div className="col-lg-4 offset-lg-8 mx-auto">
                     <form>
@@ -71,8 +73,9 @@ const Login = () => {
                                 <div className="form-group">
                                     <input
                                         type="text"
+                                        name="username"
                                         className="form-control"
-                                        id="example"
+                                        id="loginName"
                                         placeholder="Username or Email"/>
                                 </div>
                             </div>
@@ -83,7 +86,7 @@ const Login = () => {
                                     <input
                                         type="password"
                                         className="form-control"
-                                        id="example"
+                                        id="loginPassword"
                                         placeholder="Password"/>
                                 </div>
                                 <div className="form-group">
@@ -91,7 +94,7 @@ const Login = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div className="row">
                             <div className="col--sm-12">
                                 <p>Don't have any account?
                                     <Link to="/createAc">Create Account</Link>
@@ -100,9 +103,8 @@ const Login = () => {
                         </div>
                     </form>
 
-                    <h3>OR</h3>
-                    <button onClick={handleGoogleSignIn}>Continue with Google</button>
-                    <button className="mt-3">continue With Facebook</button>
+                    <h3 className="text-center mt-5">OR</h3>
+                    <button className="google-btn" onClick={handleGoogleSignIn}><img className="google-icon" src={require('../../../Icon/google.png')} alt=""/> Continue with Google</button>
                 </div>
             </div>
         </div>

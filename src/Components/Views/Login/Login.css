@@ -1,0 +1,19 @@
+.login-page .nav-link {
+    color: #000 !important;
+}
+
+.login-page form {
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.google-btn {
+    border: 1px solid #C7C7C7;
+    border-radius: 57px;
+    padding: 20px;
+    width: 100%;
+}
+.google-icon{
+    height: 30px;
+   margin-right: 40px;
+}

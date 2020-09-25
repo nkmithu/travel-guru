@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import hotels from '../../Models/hotels';
+import Header from '../Header/Header';
 import SingleHotel from '../SingleHotel/SingleHotel';
 
 const HotelsMap = () => {
@@ -14,13 +15,13 @@ const HotelsMap = () => {
         setHotelsArr(hotelsByPlaceNameArr);
     }, [])
 
-    console.log(hotelsArr);
 
     return (
-        <div className="container">
+        <div className="container login-page">
+            <Header/>
             <div className="row">
                 <div className="col-sm-12">
-                    <h4>Stay in Cox's Bazar</h4>
+                    <h4>Stay in {name}</h4>
                 </div>
             </div>
             <div className="row">

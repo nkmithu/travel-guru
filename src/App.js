@@ -8,6 +8,7 @@ import Login from './Components/Views/Login/Login';
 import CreateAccount from './Components/Views/CreateAccount/CreateAccount';
 import PrivateRoute from './Components/Controllers/PrivateRoute/PrivateRoute';
 import HotelsMap from './Components/Views/Hotels-Map/HotelsMap';
+import Header from './Components/Views/Header/Header';
 
 export const UserContext = createContext();
 function App() {
