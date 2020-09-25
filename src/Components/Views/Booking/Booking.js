@@ -1,28 +1,27 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import places from '../../Models/places';
 
 const Booking = () => {
     const {name} = useParams();
     const [place,
-        setPlace] = useState({})
+        setPlace] = useState([])
     useEffect(() => {
         const allPlaces = places;
-
-        let singlePlace = allPlaces.filter(place => {
+        let singlePlaceArr = allPlaces.filter(place => {
             return place.name === name;
         });
-
+        let singlePlace = singlePlaceArr[0];
         setPlace(singlePlace);
         console.log(singlePlace);
     }, [])
 
-    console.log(place.name);
+    console.log(place);
     return (
         <div className="container">
             <div className="row">
                 <div className="col-lg-6 col-sm-12">
-                    <h1>{name}</h1>
+                    <h1>{place.name}</h1>
                     <p>{place.description}</p>
                 </div>
                 <div className="col-lg-6 col-sm-12">
@@ -46,7 +45,7 @@ const Booking = () => {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        id="example"
+                                        id="destination"
                                         placeholder="Place Name"/>
                                 </div>
                             </div>
@@ -75,7 +74,7 @@ const Booking = () => {
                         </div>
                         <div className="row">
                             <div className="col-sm-12">
-                                <button>Start Booking</button>
+                                <button><Link to={`/user/${place.name}`}>Start Booking</Link> </button>
                             </div>
                         </div>
                     </form>

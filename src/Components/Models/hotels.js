@@ -1,6 +1,6 @@
 const hotels = [{
-        id: 1,
         hotelId: 1,
+        placeName: "Cox's Bazar",
         name: 'Light bright airy stylish apt & safe Light bright airy stylish apt & safe peaceful stay',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         rating: 4.8,
@@ -10,8 +10,9 @@ const hotels = [{
     },
 
     {
-        id: 1,
+        
         hotelId: 2,
+        placeName: "Cox's Bazar",
         name: 'Apartment in Lost Panorama',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         rating: 4.6,
@@ -20,8 +21,9 @@ const hotels = [{
 
     },
     {
-        id: 1,
+    
         hotelId: 3,
+        placeName: "Cox's Bazar",
         name: 'AR Lounge & Pool (r&r + b&b)',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         url: "https://storage.googleapis.com/static-content-hc/sites/default/files/cataloina_porto_doble_balcon_0.jpg",
@@ -30,8 +32,8 @@ const hotels = [{
 
     },
     {
-        id: 2,
         hotelId: 4,
+        placeName: "Sreemongol",
         name: ' bright airy stylish apt & safe Light bright airy stylish apt & safe peaceful stay',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         rating: 4.8,
@@ -41,9 +43,10 @@ const hotels = [{
     },
 
     {
-        id: 2,
+        
         hotelId: 5,
         name: 'Lost Panorama',
+        placeName: "Sreemongol",
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         rating: 4.6,
         url: "https://storage.googleapis.com/static-content-hc/sites/default/files/catalonia_porto_patio.jpg",
@@ -51,8 +54,8 @@ const hotels = [{
 
     },
     {
-        id: 2,
         hotelId: 6,
+        placeName: "Sreemongol",
         name: 'Lounge & Pool (r&r + b&b)',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         url: "https://exp.cdn-hotels.com/hotels/19000000/18310000/18304100/18304086/8ac30b77_z.jpg?impolicy=fcrop&w=773&h=530&q=high",
@@ -61,8 +64,9 @@ const hotels = [{
 
     },
     {
-        id: 3,
+       
         hotelId: 7,
+        placeName: "Sundarban",
         name: 'Safe bright airy stylish apt &  Light bright airy stylish apt & safe peaceful stay',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         rating: 4.8,
@@ -72,8 +76,9 @@ const hotels = [{
     },
 
     {
-        id: 3,
+        
         hotelId: 8,
+        placeName: "Sundarban",
         name: 'Panorama Lost',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         rating: 4.6,
@@ -82,8 +87,9 @@ const hotels = [{
 
     },
     {
-        id: 3,
+        
         hotelId: 9,
+        placeName: "Sundarban",
         name: ' Pool & Lounge(r&r + b&b)',
         description: 'Wif Air conditioning Kitchen. Cancellation fexibility availiable',
         url: "https://exp.cdn-hotels.com/hotels/19000000/18310000/18304100/18304086/8ac30b77_z.jpg?impolicy=fcrop&w=773&h=530&q=high",
